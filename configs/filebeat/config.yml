@@ -1,0 +1,17 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /usr/share/filebeat/access.log
+    fields:
+      service: nginx_log
+
+  - type: log
+    enabled: true
+    paths:
+      - /usr/share/filebeat/redis-server.log
+    fileds:
+      service: redis_log
+
+output.logstash:
+  hosts: ["logstash:5044"]

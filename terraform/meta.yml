@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: dmil
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDfV/zaR+kImO1k0ulNUljIoJh9S2I68UAu0NMQUhe2m yandex
